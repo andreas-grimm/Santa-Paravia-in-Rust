@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cargo clean'
-                sh 'cargo build --release'
+                sh '/home/jenkins/.cargo/bin/cargo clean'
+                sh '/home/jenkins/.cargo/bin/cargo build --release'
             }
         }
         stage('Deploy') {
